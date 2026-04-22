@@ -17,13 +17,13 @@ const placeholderLabel =
 >
   <a href={url} target={target}>
     <div class="hero-content flex-col md:flex-row">
-      <div class="w-full md:w-[16rem] h-44 rounded-lg bg-base-200 border border-base-300 p-2 flex items-center justify-center overflow-hidden">
+      <div class="w-full md:w-[16rem] h-44 rounded-lg bg-white border border-base-300 overflow-hidden">
         {
           hasImage ? (
             <img
               src={img}
               alt={title}
-              class="w-full h-full object-contain"
+              class="w-full h-full object-cover"
               loading="lazy"
             />
           ) : (

@@ -42,11 +42,11 @@ const publications = publicationEntries.map((paper) => ({
     </div>
 
     <!-- RIGHT: headshot -->
-    <div class="md:ml-6 md:mt-8 md:w-72 lg:w-80 shrink-0 rounded-3xl overflow-hidden bg-base-200 p-2">
+    <div class="md:ml-6 md:mt-8 md:w-64 lg:w-72 shrink-0 rounded-3xl overflow-hidden bg-base-200 p-2">
     <img
         src={`${baseUrl}cuong.jpeg`}
         alt="Portrait of Cuong"
-        class="w-full h-[44rem] object-cover object-[center_65%] rounded-2xl"
+        class="w-full h-auto max-h-[44rem] scale-[1.06] translate-y-3 object-contain object-top rounded-2xl"
         loading="eager"
         fetchpriority="high"
       />

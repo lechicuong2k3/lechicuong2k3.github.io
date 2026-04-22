@@ -1,0 +1,142 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import TimeLineElement from "../components/cv/TimeLine.astro";
+---
+
+<BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Cuong Chi Le</div>
+    <div class="text-lg mt-2">
+      lechicuongldk@gmail.com | +1 469-246-8980 | <a href="https://github.com/lechicuong2k3" target="_blank" class="link">Github</a> | <a href="https://scholar.google.com/citations?user=uHHHdN8AAAAJ&hl=en" target="_blank" class="link">Google Scholar</a> | <a href="https://www.linkedin.com/in/cuong-chi-le-0a67a813b/" target="_blank" class="link">Linkedin</a>
+    </div>
+  </div>
+
+  <div class="mb-10 text-justify">
+    <b>Research Interest:</b> AI4SE, Automated Software Engineering, Mining Software Repositories, Large Language Model
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Education</div>
+  </div>
+
+  <div class="time-line-container grid gap-4 mb-10">
+    <TimeLineElement
+      title="Doctor of Philosophy, Computer Science"
+      subtitle="Jan 2026 – Jan 2031 @ The University of Texas at Dallas, Richardson, Texas, USA"
+    >
+    </TimeLineElement>
+    <TimeLineElement
+      title="Bachelor of Science, Computer Science"
+      subtitle="Sep 2021 - May 2025 @ VinUniversity, Hanoi, Vietnam"
+    >
+      GPA: 3.7/4.0 (Excellence Degree) <br>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Experiences</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Researcher — AI4SE Lab"
+      subtitle="Jan 2026 – Now @ The University of Texas at Dallas, Richardson, Texas, USA"
+    >
+      Supervisor: Dr. Tien N. Nguyen
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Teaching Assistant"
+      subtitle="Jan 2026 – Now @ The University of Texas at Dallas, Richardson, Texas, USA"
+    >
+      CS4348 - Operating System (Class Capacity: 90 students)
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Research Resident — AI Residency Program"
+      subtitle="June 2024 – Dec 2025 @ FPT Software AI Center, Hanoi, Vietnam"
+    >
+      <u><em>PI(s):</em></u> Dr. Tien N. Nguyen & Dr. Nghi D. Q. Bui<br>
+      Focused on applying AI/ML to software engineering tasks, exploring if/how LLMs understand and reason about program behavior, and enhancing their performance on coding tasks like Code Refactoring, Software Testing, and Code Generation.
+    </TimeLineElement>
+    <TimeLineElement
+      title="Research Assistant — Security and Artificial Intelligence Lab (SAIL)"
+      subtitle="Aug 2023 - June 2024 @ VinUniversity, Hanoi, Vietnam"
+    >
+      <u><em>Project:</em></u> Toward Clean-label Physical Backdoor Attack on Deep Learning systems.<br>
+      <u><em>PI(s):</em></u> Dr. Kok-Seng Wong & Dr. Khoa D Doan<br>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Undergrad Research Assistant — VinUni-Illinois Smart Health Center Summer School"
+      subtitle="July 2023 - Aug 2023 @ Hanoi, Vietnam"
+    >
+      <u><em>Project:</em></u> Physical backdoor attack on Federated learning.<br>
+      <u><em>PI(s):</em></u> Dr. Kok-Seng Wong<br>
+    </TimeLineElement>
+    <TimeLineElement
+      title="Undergrad Research Assistant — College of Engineering and Computer Science"
+      subtitle="Mar 2022 - July 2023 @ VinUniversity, Hanoi, Vietnam"
+    >
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Awards & Honours</div>
+  </div>
+
+<ul class="list-disc mx-6 mb-10 grid gap-2">
+  <li><b>🥉Third Prize</b>, ICPC Vietnam National Programming Contest (Nov 2023)</li>
+
+  <li><b>🏅First Prize</b>, National Vietnam Mathematical Olympiad for University Students (Apr 2023)</li>
+
+  <li><b>🏆VinUniversity Excel Leadership Award</b>, Academic Year 2022–2023</li>
+
+  <li><b>🏆VinUniversity Dean's List</b>, Fall 2021, Spring 2022, Spring 2023, Fall 2024</li>
+
+  <li><b>🏅First Prize</b>, CTF Competition at VinUniversity (April 2022)</li>
+
+  <li><b>🥈Second Prize</b>, Mathematical Modeling Competition (May 2021)</li>
+
+  <li><b>🥈Second Prize</b>, National Vietnam Mathematical Olympiad (VMO) (Mar 2021)</li>
+
+  <li><b>90% Scholarship</b>, VinUniversity</li>
+</ul>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Extracurricular & Community Service</div>
+  </div>
+
+  <div class="time-line-container mb-10">
+    <TimeLineElement
+      title="Student Volunteer — ICSE 2026"
+      subtitle="April 12-18, 2026 @ Rio de Janeiro, Brazil"
+    >
+      <span class="font-normal">
+      Supported conference organization and on-site operations for the International Conference on Software Engineering (ICSE 2026), assisting with volunteer activities and helping ensure a smooth experience for attendees.
+      </span>
+    </TimeLineElement>
+
+    <TimeLineElement
+      title="Founder & President — VinPioneers"
+      subtitle="2021 – 2023 @ VinUniversity, Hanoi, Vietnam"
+    >
+    <span class="font-normal">
+      Developed a dynamic Mathematics community at VinUni, promoting knowledge exchange, cognitive development, and meaningful connections among students.
+    </span>
+    </TimeLineElement>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-3xl w-full font-bold">Skills</div>
+  </div>
+
+  <div class="mb-5">
+    <div class="text-xl font-semibold mb-2">Languages:</div>
+    <p>Python, Java, C++, HTML, CSS, JavaScript, TypeScript, Golang</p>
+  </div>
+
+  <div class="mb-10">
+    <div class="text-xl font-semibold mb-2">Tools/Packages/Framework:</div>
+    <p>PyTorch, TensorFlow, DSPy, Git, Remix, React, NodeJS, Npm, Docker, Postman, TablePlus, Pandas</p>
+  </div>
+</BaseLayout>

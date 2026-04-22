@@ -1,0 +1,82 @@
+---
+const { title, img, authors, author_index, abstract, url, badge, tags, target = "_blank" } = Astro.props;
+const tag_url = url && url !== "#" ? url.split("/").slice(0, -1).join("/") + "/tag" : "";
+const hasImage = Boolean(img);
+const placeholderLabel =
+  badge && (badge.includes("Preprint") || badge.includes("preprint"))
+    ? "Research Preprint"
+    : "Research Publication";
+// let showFullDesc = false;
+// function toggleDescription() {
+//   showFullAbstract = !showFullAbstract;
+// }
+---
+
+<div
+  class="rounded-lg bg-base-100 hover:shadow-xl transition ease-in-out hover:scale-[102%]"
+>
+  <a href={url} target={target}>
+    <div class="hero-content flex-col md:flex-row">
+      <div class="w-full md:w-[16rem] h-44 rounded-lg bg-base-200 border border-base-300 p-2 flex items-center justify-center overflow-hidden">
+        {
+          hasImage ? (
+            <img
+              src={img}
+              alt={title}
+              class="w-full h-full object-contain"
+              loading="lazy"
+            />
+          ) : (
+            <div class="w-full h-full rounded-md bg-gradient-to-br from-slate-100 via-base-100 to-slate-200 flex flex-col justify-between p-4 text-left">
+              <div class="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                {placeholderLabel}
+              </div>
+              <div class="text-lg font-bold leading-snug text-slate-700 line-clamp-4">
+                {title}
+              </div>
+            </div>
+          )
+        }
+      </div>
+      <div class="grow w-full">
+        <h1 class="text-xl font-bold">
+          {badge && (
+            <div class={`badge ${badge.includes("Preprint") || badge.includes("preprint") ? "badge-error" : "badge-primary"}`}>
+              {badge}
+            </div>
+          )}
+        </h1>
+        <h1 class="text-xl font-bold">
+          {title}
+        </h1>
+        <p class="py-2 text-md font-regular">
+          {authors.map((author, index) => (
+            <span class={index === author_index ? "font-bold" : ""}>
+              {author}{index < authors.length - 1 ? ', ' : ''}
+            </span>
+          ))}
+        </p>
+        <div class="relative">
+          {abstract && (
+            <p class={"line-clamp-3"}>
+              {abstract}
+            </p>
+          )}
+          <!-- <button class="text-primary underline" on:click={toggleDescription}>
+            {showFullDesc ? "Read less" : "Read more"}
+          </button> -->
+        </div>
+        <div class="card-actions justify-end">
+          {
+            tags &&
+              tags.map((tag) => (
+                <a href={`${tag_url}/${tag}`} class="badge badge-outline">
+                  {tag}
+                </a>
+              ))
+          }
+        </div>
+      </div>
+    </div>
+  </a>
+</div>

@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HorizontalCardPublication from "../components/HorizontalCardPublication.astro";
+import HorizontalCard from "../components/HorizontalCard.astro";
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title = "Research & Projects" sideBarActiveItemID="projects">
+  <div>
+    <div class="text-3xl w-full font-bold mb-5">Research</div>
+  </div>
+
+  <!-- Publications -->
+  <HorizontalCardPublication
+    badge="ACL 2026 Main"
+    title="SpecMind: Cognitively Inspired, Interactive Multi-Turn Framework for Postcondition Inference"
+    authors={["Cuong Chi Le", "Minh V. T. Pham", "Tung Duy Vu", "Cuong Duc Van", "Hoang Nhat Phan", "Huy Nhat Phan", "Tien N. Nguyen"]}
+    author_index={0}
+    img={`${baseUrl}Specmind.png`}
+    abstract=""
+    url="https://arxiv.org/abs/2602.20610"
+  />
+
+  <HorizontalCardPublication
+    badge="ICSE 2026"
+    title="TestWeaver: Execution-aware, Feedback-driven Regression Testing Generation with Large Language Models"
+    authors={["Cuong Chi Le", "Cuong Duc Van", "Tung Duy Vu", "Minh V. T. Pham", "Hoang Nhat Phan", "Huy Nhat Phan", "Tien N Nguyen"]}
+    author_index={0}
+    img={`${baseUrl}TestWeaver.png`}
+    abstract=""
+    url="https://scholar.google.com/scholar?q=TestWeaver:+Execution-aware,+Feedback-driven+Regression+Testing+Generation+with+Large+Language+Models"
+  />
+
+  <HorizontalCardPublication
+    badge="ICSE 2026"
+    title="SWE-Synth: Synthesizing Verifiable Bug-Fix Data to Enable Large Language Models in Resolving Real-World Bugs"
+    authors={["Minh V. T. Pham", "Huy N. Phan", "Hoang Nhat Phan", "Cuong Chi Le", "Tien N. Nguyen", "Nghi D. Q. Bui"]}
+    author_index={3}
+    img={`${baseUrl}Swe-Synth.png`}
+    abstract=""
+    url="https://scholar.google.com/scholar?q=SWE-Synth:+Synthesizing+Verifiable+Bug-Fix+Data+to+Enable+Large+Language+Models+in+Resolving+Real-World+Bugs"
+  />
+
+  <HorizontalCardPublication
+    badge="NAACL 2025"
+    title="VisualCoder: Guiding Large Language Models in Code Execution with Fine-grained Multimodal Chain-of-Thought Reasoning"
+    authors={["Cuong Chi Le", "Hoang-Chau Truong-Vinh", "Huy Nhat Phan", "Dung Duy Le", "Tien N. Nguyen", "Nghi D. Q. Bui"]}
+    author_index={0}
+    img={`${baseUrl}VisualCoder.png`}
+    abstract=""
+    url="https://scholar.google.com/scholar?q=VisualCoder:+Guiding+Large+Language+Models+in+Code+Execution+with+Fine-grained+Multimodal+Chain-of-Thought+Reasoning"
+  />
+
+  <HorizontalCardPublication
+    badge="FORGE 2025"
+    title="CodeFlow: Program Behavior Prediction with Dynamic Dependencies Learning"
+    authors={["Cuong Chi Le", "Hoang Nhat Phan", "Huy Nhat Phan", "Tien N. Nguyen", "Nghi D. Q. Bui"]}
+    author_index={0}
+    img={`${baseUrl}CodeFlow.png`}
+    abstract=""
+    url="https://scholar.google.com/scholar?q=CodeFlow:+Program+Behavior+Prediction+with+Dynamic+Dependencies+Learning"
+  />
+
+  <HorizontalCardPublication
+    badge="Preprint"
+    title="Semantic Evolution over Populations for LLM-Guided Automated Program Repair"
+    authors={["Cuong Chi Le", "Minh Le-Anh", "Cuong Duc Van", "Tien N. Nguyen"]}
+    author_index={0}
+    img=""
+    abstract=""
+    url="https://arxiv.org/abs/2604.02134"
+  />
+
+  <HorizontalCardPublication
+    badge="Preprint"
+    title="Enhancing Program Repair with Specification Guidance and Intermediate Behavioral Signals"
+    authors={["Minh Le-Anh", "Cuong Chi Le", "Tien N. Nguyen"]}
+    author_index={1}
+    img=""
+    abstract=""
+    url="https://arxiv.org/abs/2604.11770"
+  />
+
+  <HorizontalCardPublication
+    badge="Preprint"
+    title="When Names Disappear: Revealing What LLMs Actually Understand About Code"
+    authors={["Cuong Chi Le", "Minh V. T. Pham", "Cuong Duc Van", "Hoang N Phan", "Huy N Phan", "Tien N. Nguyen"]}
+    author_index={0}
+    img={`${baseUrl}obfuscation.png`}
+    abstract=""
+    url="https://arxiv.org/abs/2510.03178"
+  />
+
+  <div class="mt-10">
+    <div class="text-3xl w-full font-bold mb-5">Projects</div>
+  </div>
+
+  <HorizontalCard
+    title="Clinical Rotation website"
+    img=""
+    desc="Developed a website that can effectively produce the most appropriate clinical rotation including schedules for medical students, nursing students, and residents, by using data from the academic training programs from CHS (College of Health Sciences) at Vin University"
+    url="#"
+    badge="Front-end Developer/Back-end Developer"
+    target="_self"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="UNIFIX start-up"
+    img=""
+    desc="Took on the position of CTO for an edu-tech startup called UNIFIX, which has successfully raised $2000 in funding. Co-ordinated development decisions with clients and managed team with Agile methodology."
+    url="#"
+    badge="Front-end Developer/Scrum Master/Product Manager"
+    target="_self"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Food Menu Translator AI-integrated website"
+    img=""
+    desc="Used React.js to develop front-end interface for a web app that help enhancing tourists' food experience. Main functions: Explore nearby restaurants' location, menu, and reputation; Save favorite restaurants for future use; Find restaurants based on food name, Extract food list from menu image"
+    url="#"
+    badge="Front-end Developer"
+    target="_self"
+  />
+
+  <div class="divider my-0"></div>
+
+  <HorizontalCard
+    title="Brick Breaker Java App"
+    img=""
+    desc="Built a desktop app in Java in which the player must smash a wall of bricks by deflecting a bouncing ball with a paddle, whenever the ball touches a brick, it will disappear, and the player wins when breaking all the bricks or loses when failing to catch the ball with the paddle. Created and used many types of Data Structure and classes that are organized by Object Oriented Programming style."
+    url="#"
+    badge="Java Developer"
+    target="_self"
+  />
+</BaseLayout>

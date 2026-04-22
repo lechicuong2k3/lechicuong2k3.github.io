@@ -1,0 +1,24 @@
+---
+import SideBarFooter from "./SideBarFooter.astro";
+import { Image } from "astro:assets";
+import SideBarMenu from "./SideBarMenu.astro";
+const { sideBarActiveItemID } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<div class="drawer-side z-40">
+  <label for="my-drawer" class="drawer-overlay"></label>
+  <aside class="px-2 pt-2 h-auto min-h-full w-[19rem] bg-base-200 text-base-content flex flex-col">
+    <div class="w-fit mx-auto mt-5 mb-6">
+      <a href={baseUrl}>
+        <div class="avatar transition ease-in-out hover:scale-[102%] block m-auto">
+          <div class="w-[3.5rem]">
+            <Image class="mask rounded-3xl" format="webp" width={150} height={150} src={`${baseUrl}University_of_Texas_at_Dallas_logotype.png`} alt="Logo image" />
+          </div>
+        </div>
+      </a>
+    </div>
+    <SideBarMenu sideBarActiveItemID={sideBarActiveItemID} />
+    <SideBarFooter />
+  </aside>
+</div>

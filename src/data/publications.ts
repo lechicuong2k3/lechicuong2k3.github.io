@@ -31,7 +31,7 @@ export const publicationEntries = [
     url: "https://arxiv.org/abs/2504.14757",
   },
   {
-    badge: "NAACL 2025",
+    badge: "NAACL 2025 Findings",
     title: "VisualCoder: Guiding Large Language Models in Code Execution with Fine-grained Multimodal Chain-of-Thought Reasoning",
     authors: ["Cuong Chi Le", "Hoang-Chau Truong-Vinh", "Huy Nhat Phan", "Dung Duy Le", "Tien N. Nguyen", "Nghi D. Q. Bui"],
     author_index: 0,
@@ -64,7 +64,7 @@ export const publicationEntries = [
     badge: "Preprint",
     title: "Enhancing Program Repair with Specification Guidance and Intermediate Behavioral Signals",
     authors: ["Minh Le-Anh*", "Cuong Chi Le*", "Tien N. Nguyen"],
-    author_index: [0, 1],
+    author_index: [1],
     author_note: "*co-first author",
     img: "",
     abstract:

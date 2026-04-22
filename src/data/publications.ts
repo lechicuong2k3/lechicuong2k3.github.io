@@ -48,7 +48,7 @@ export const publicationEntries = [
     img: "CodeFlow.png",
     abstract:
       "Predicting program behavior without execution is a critical task in software engineering. Existing models often fall short in capturing the dynamic dependencies among program elements. To address this, we present CodeFlow, a novel machine learning-based approach that predicts code coverage and detects runtime errors by learning both static and dynamic dependencies within the code. By using control flow graphs (CFGs), CodeFlow effectively represents all possible execution paths and the statistic relations between different statements, providing a more comprehensive understanding of program behaviors. CodeFlow constructs CFGs to represent possible execution paths and learns vector representations (embeddings) for CFG nodes, capturing static control-flow dependencies. Additionally, it learns dynamic dependencies by leveraging execution traces, which reflect the impacts among statements during execution. This combination enables CodeFlow to accurately predict code coverage and identify runtime errors. Our empirical evaluation demonstrates that CodeFlow significantly improves code coverage prediction accuracy and effectively localizes runtime errors, outperforming state-of-the-art models.",
-    url: "https://conf.researchr.org/details/forge-2025/forge-2025-papers/13/CodeFlow-Program-Behavior-Prediction-with-Dynamic-Dependencies-Learning",
+    url: "https://ieeexplore.ieee.org/abstract/document/11052828",
   },
   {
     badge: "Preprint",

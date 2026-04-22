@@ -1,82 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCardPublication from "../components/HorizontalCardPublication.astro";
+import { publicationEntries } from "../data/publications";
 
 const baseUrl = import.meta.env.BASE_URL;
-const publications = [
-  {
-    badge: "ACL 2026 Main",
-    title: "SpecMind: Cognitively Inspired, Interactive Multi-Turn Framework for Postcondition Inference",
-    authors: ["Cuong Chi Le", "Minh V. T. Pham", "Tung Duy Vu", "Cuong Duc Van", "Hoang Nhat Phan", "Huy Nhat Phan", "Tien N. Nguyen"],
-    author_index: 0,
-    img: `${baseUrl}Specmind.png`,
-    abstract: "",
-    url: "https://arxiv.org/abs/2602.20610"
-  },
-  {
-    badge: "ICSE 2026",
-    title: "TestWeaver: Execution-aware, Feedback-driven Regression Testing Generation with Large Language Models",
-    authors: ["Cuong Chi Le", "Cuong Duc Van", "Tung Duy Vu", "Minh V. T. Pham", "Hoang Nhat Phan", "Huy Nhat Phan", "Tien N Nguyen"],
-    author_index: 0,
-    img: `${baseUrl}TestWeaver.png`,
-    abstract: "",
-    url: "https://arxiv.org/abs/2508.01255"
-  },
-  {
-    badge: "ICSE 2026",
-    title: "SWE-Synth: Synthesizing Verifiable Bug-Fix Data to Enable Large Language Models in Resolving Real-World Bugs",
-    authors: ["Minh V. T. Pham", "Huy N. Phan", "Hoang Nhat Phan", "Cuong Chi Le", "Tien N. Nguyen", "Nghi D. Q. Bui"],
-    author_index: 3,
-    img: `${baseUrl}Swe-Synth.png`,
-    abstract: "",
-    url: "https://arxiv.org/abs/2504.14757"
-  },
-  {
-    badge: "NAACL 2025",
-    title: "VisualCoder: Guiding Large Language Models in Code Execution with Fine-grained Multimodal Chain-of-Thought Reasoning",
-    authors: ["Cuong Chi Le", "Hoang-Chau Truong-Vinh", "Huy Nhat Phan", "Dung Duy Le", "Tien N. Nguyen", "Nghi D. Q. Bui"],
-    author_index: 0,
-    img: `${baseUrl}VisualCoder.png`,
-    abstract: "",
-    url: "https://aclanthology.org/2025.findings-naacl.370/"
-  },
-  {
-    badge: "FORGE 2025",
-    title: "CodeFlow: Program Behavior Prediction with Dynamic Dependencies Learning",
-    authors: ["Cuong Chi Le", "Hoang Nhat Phan", "Huy Nhat Phan", "Tien N. Nguyen", "Nghi D. Q. Bui"],
-    author_index: 0,
-    img: `${baseUrl}CodeFlow.png`,
-    abstract: "",
-    url: "https://ieeexplore.ieee.org/abstract/document/11052828/"
-  },
-  {
-    badge: "Preprint",
-    title: "Semantic Evolution over Populations for LLM-Guided Automated Program Repair",
-    authors: ["Cuong Chi Le", "Minh Le-Anh", "Cuong Duc Van", "Tien N. Nguyen"],
-    author_index: 0,
-    img: "",
-    abstract: "",
-    url: "https://arxiv.org/abs/2604.02134"
-  },
-  {
-    badge: "Preprint",
-    title: "Enhancing Program Repair with Specification Guidance and Intermediate Behavioral Signals",
-    authors: ["Minh Le-Anh", "Cuong Chi Le", "Tien N. Nguyen"],
-    author_index: 1,
-    img: "",
-    abstract: "",
-    url: "https://arxiv.org/abs/2604.11770"
-  },
-  {
-    badge: "Preprint",
-    title: "When Names Disappear: Revealing What LLMs Actually Understand About Code",
-    authors: ["Cuong Chi Le", "Minh V. T. Pham", "Cuong Duc Van", "Hoang N Phan", "Huy N Phan", "Tien N. Nguyen"],
-    author_index: 0,
-    img: `${baseUrl}obfuscation.png`,
-    abstract: "",
-    url: "https://arxiv.org/abs/2510.03178"
-  }
-];
+const publications = publicationEntries.map((paper) => ({
+  ...paper,
+  img: paper.img ? `${baseUrl}${paper.img}` : "",
+}));
 ---
 
 <BaseLayout sideBarActiveItemID="home">

@@ -1,5 +1,25 @@
 export const publicationEntries = [
   {
+    badge: "Preprint",
+    title: "Teaching Code LLMs to Reason with Intermediate Formal Specifications",
+    authors: ["Minh Le-Anh", "Cuong Chi Le", "Tien N. Nguyen"],
+    author_index: 1,
+    img: "SpecCoder.png",
+    abstract:
+      "We introduce SpecCoder, a verification-guided CodeLLM training framework for generating executable checkpoint specifications at meaningful internal program points. SpecCoder learns from validated reference programs, behavior-changing mutants, and multi-turn refinement traces, improving specification quality and downstream correctness reasoning on HumanExec.",
+    url: "https://arxiv.org/abs/2607.04232",
+  },
+  {
+    badge: "Preprint",
+    title: "Benchmarking Code Improvement with Progressive, Adaptive, and Interactive Feedback",
+    authors: ["Cuong Chi Le", "Aashish Yadavally", "Minh Le-Anh", "Tien N. Nguyen"],
+    author_index: 0,
+    img: "PAIR-bench.png",
+    abstract:
+      "We introduce PAIR-Bench, a progressive and adaptive benchmark for evaluating code improvement through feedback-guided refinement. It measures repair trajectories, feedback use, regression preservation, and how much assistance models need, going beyond final pass/fail correctness.",
+    url: "https://arxiv.org/abs/2607.01360",
+  },
+  {
     badge: "ACL 2026 Main",
     title: "SpecMind: Cognitively Inspired, Interactive Multi-Turn Framework for Postcondition Inference",
     authors: ["Cuong Chi Le", "Minh V. T. Pham", "Tung Duy Vu", "Cuong Duc Van", "Hoang Nhat Phan", "Huy Nhat Phan", "Tien N. Nguyen"],

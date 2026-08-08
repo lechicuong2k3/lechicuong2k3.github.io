@@ -98,13 +98,15 @@ const publications = publicationEntries.map((paper) => ({
               <span aria-hidden="true">📄</span>
               <span>2 New Preprints</span>
             </div>
-            <div class="mt-2 space-y-2 text-base">
-              <p>
-                <b>PAIR-Bench</b> benchmarks code improvement with progressive, adaptive feedback.
-              </p>
-              <p>
-                <b>SpecCoder</b> teaches Code LLMs to reason with executable intermediate specifications.
-              </p>
+            <div class="mt-2 grid gap-2 sm:grid-cols-2">
+              <div class="rounded-lg bg-base-100/80 p-3">
+                <div class="text-sm font-semibold">PAIR-Bench</div>
+                <div class="text-sm opacity-80">Code improvement with progressive, adaptive feedback</div>
+              </div>
+              <div class="rounded-lg bg-base-100/80 p-3">
+                <div class="text-sm font-semibold">SpecCoder</div>
+                <div class="text-sm opacity-80">Executable intermediate specifications for Code LLMs</div>
+              </div>
             </div>
           </div>
         </div>

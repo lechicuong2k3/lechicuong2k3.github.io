@@ -1,25 +1,5 @@
 export const publicationEntries = [
   {
-    badge: "Preprint",
-    title: "Teaching Code LLMs to Reason with Intermediate Formal Specifications",
-    authors: ["Minh Le-Anh", "Cuong Chi Le", "Tien N. Nguyen"],
-    author_index: 1,
-    img: "SpecCoder.png",
-    abstract:
-      "We introduce SpecCoder, a verification-guided CodeLLM training framework for generating executable checkpoint specifications at meaningful internal program points. SpecCoder learns from validated reference programs, behavior-changing mutants, and multi-turn refinement traces, improving specification quality and downstream correctness reasoning on HumanExec.",
-    url: "https://arxiv.org/abs/2607.04232",
-  },
-  {
-    badge: "Preprint",
-    title: "Benchmarking Code Improvement with Progressive, Adaptive, and Interactive Feedback",
-    authors: ["Cuong Chi Le", "Aashish Yadavally", "Minh Le-Anh", "Tien N. Nguyen"],
-    author_index: 0,
-    img: "PAIR-bench.png",
-    abstract:
-      "We introduce PAIR-Bench, a progressive and adaptive benchmark for evaluating code improvement through feedback-guided refinement. It measures repair trajectories, feedback use, regression preservation, and how much assistance models need, going beyond final pass/fail correctness.",
-    url: "https://arxiv.org/abs/2607.01360",
-  },
-  {
     badge: "ACL 2026 Main",
     title: "SpecMind: Cognitively Inspired, Interactive Multi-Turn Framework for Postcondition Inference",
     authors: ["Cuong Chi Le", "Minh V. T. Pham", "Tung Duy Vu", "Cuong Duc Van", "Hoang Nhat Phan", "Huy Nhat Phan", "Tien N. Nguyen"],
@@ -27,7 +7,7 @@ export const publicationEntries = [
     img: "Specmind.png",
     abstract:
       "Specifications are vital for ensuring program correctness, yet writing them manually remains challenging and time-intensive. Recent large language model (LLM)-based methods have shown successes in generating specifications such as postconditions, but existing single-pass prompting often yields inaccurate results. In this paper, we present SpecMind, a novel framework for postcondition generation that treats LLMs as interactive and exploratory reasoners rather than one-shot generators. SpecMind employs feedback-driven multi-turn prompting approaches, enabling the model to iteratively refine candidate postconditions by incorporating implicit and explicit correctness feedback, while autonomously deciding when to stop. This process fosters deeper code comprehension and improves alignment with true program behavior via exploratory attempts. Our empirical evaluation shows that SpecMind significantly outperforms state-of-the-art approaches in both accuracy and completeness of generated postconditions.",
-    url: "https://arxiv.org/abs/2602.20610",
+    url: "https://aclanthology.org/2026.acl-long.1687",
   },
   {
     badge: "ICSE 2026",
@@ -69,6 +49,26 @@ export const publicationEntries = [
     abstract:
       "Predicting program behavior without execution is a critical task in software engineering. Existing models often fall short in capturing the dynamic dependencies among program elements. To address this, we present CodeFlow, a novel machine learning-based approach that predicts code coverage and detects runtime errors by learning both static and dynamic dependencies within the code. By using control flow graphs (CFGs), CodeFlow effectively represents all possible execution paths and the statistic relations between different statements, providing a more comprehensive understanding of program behaviors. CodeFlow constructs CFGs to represent possible execution paths and learns vector representations (embeddings) for CFG nodes, capturing static control-flow dependencies. Additionally, it learns dynamic dependencies by leveraging execution traces, which reflect the impacts among statements during execution. This combination enables CodeFlow to accurately predict code coverage and identify runtime errors. Our empirical evaluation demonstrates that CodeFlow significantly improves code coverage prediction accuracy and effectively localizes runtime errors, outperforming state-of-the-art models.",
     url: "https://ieeexplore.ieee.org/abstract/document/11052828",
+  },
+  {
+    badge: "Preprint",
+    title: "Benchmarking Code Improvement with Progressive, Adaptive, and Interactive Feedback",
+    authors: ["Cuong Chi Le", "Aashish Yadavally", "Minh Le-Anh", "Tien N. Nguyen"],
+    author_index: 0,
+    img: "PAIR-bench.png",
+    abstract:
+      "We introduce PAIR-Bench, a progressive and adaptive benchmark for evaluating code improvement through feedback-guided refinement. It measures repair trajectories, feedback use, regression preservation, and how much assistance models need, going beyond final pass/fail correctness.",
+    url: "https://arxiv.org/abs/2607.01360",
+  },
+  {
+    badge: "Preprint",
+    title: "Teaching Code LLMs to Reason with Intermediate Formal Specifications",
+    authors: ["Minh Le-Anh", "Cuong Chi Le", "Tien N. Nguyen"],
+    author_index: 1,
+    img: "SpecCoder.png",
+    abstract:
+      "We introduce SpecCoder, a verification-guided CodeLLM training framework for generating executable checkpoint specifications at meaningful internal program points. SpecCoder learns from validated reference programs, behavior-changing mutants, and multi-turn refinement traces, improving specification quality and downstream correctness reasoning on HumanExec.",
+    url: "https://arxiv.org/abs/2607.04232",
   },
   {
     badge: "Preprint",

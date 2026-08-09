@@ -8,6 +8,83 @@ const publications = publicationEntries.map((paper) => ({
   ...paper,
   img: paper.img ? `${baseUrl}${paper.img}` : "",
 }));
+
+const newsItems = [
+  {
+    date: "Jul 2026",
+    icon: "📄",
+    title: "2 New Preprints",
+    markerClass: "bg-accent",
+    cardClass: "border-accent/40 bg-accent/10",
+    cards: [
+      {
+        title: "PAIR-Bench",
+        desc: "Code improvement with progressive, adaptive feedback",
+      },
+      {
+        title: "SpecCoder",
+        desc: "Executable intermediate specifications for Code LLMs",
+      },
+    ],
+  },
+  {
+    date: "Jul 2026",
+    icon: "🎉",
+    title: "ACL 2026 Acceptance",
+    markerClass: "bg-secondary",
+    cardClass: "border-secondary/40 bg-secondary/10",
+    body: "<b>SpecMind</b> was accepted to the <b>ACL 2026 Main Conference</b> with acceptance rate ~19%.",
+  },
+  {
+    date: "Apr 2026",
+    icon: "📄",
+    title: "2 New Preprints on Automated Program Repair",
+    markerClass: "bg-accent",
+    cardClass: "border-accent/40 bg-accent/10",
+    cards: [
+      {
+        title: "EvolRepair",
+        desc: "Semantic evolution for LLM-guided APR",
+      },
+      {
+        title: "SpecTune",
+        desc: "Specification-guided repair with intermediate behavioral signals",
+      },
+    ],
+  },
+  {
+    date: "Apr 2026",
+    icon: "🏆",
+    title: "ACM SIGSOFT Distinguished Paper Award",
+    markerClass: "bg-warning",
+    cardClass: "border-warning/40 bg-warning/10",
+    body: "<b>SWE-Synth</b> received the <b>ACM SIGSOFT Distinguished Paper Award</b> at ICSE 2026, recognizing it among the top <b>1.5%</b> of accepted papers.",
+  },
+  {
+    date: "Jan 2026",
+    icon: "🎉",
+    title: "ICSE 2026 Acceptances",
+    markerClass: "bg-success",
+    cardClass: "border-success/40 bg-success/10",
+    body: "Two papers accepted: <b>TestWeaver</b> and <b>SWE-Synth</b> in ICSE 2026 Research Track (April 12-April 18, 2026, Rio de Janeiro, Brazil).",
+  },
+  {
+    date: "Apr 2025",
+    icon: "🎉",
+    title: "NAACL 2025 Acceptance",
+    markerClass: "bg-info",
+    cardClass: "border-info/40 bg-info/10",
+    body: "<b>VisualCoder</b> was accepted to Findings of NAACL 2025 (April 29-May 4, 2025, Albuquerque, New Mexico, USA).",
+  },
+  {
+    date: "Apr 2025",
+    icon: "🎉",
+    title: "FORGE 2025 Acceptance",
+    markerClass: "bg-primary",
+    cardClass: "border-primary/30 bg-primary/10",
+    body: "<b>CodeFlow</b> was accepted to FORGE 2025 (April 27-April 28, Ottawa, Ontario, Canada).",
+  },
+];
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -85,125 +162,49 @@ const publications = publicationEntries.map((paper) => ({
 </div>
 
    <div class="mt-6">
-    <div class="text-3xl w-full font-bold mb-3 mt-2">News</div>
-    <div class="max-h-[28rem] overflow-y-auto pr-2">
-      <div class="space-y-4">
-        <div class="flex gap-4">
-          <div class="flex w-5 flex-col items-center pt-2">
-            <div class="h-3 w-3 rounded-full bg-accent"></div>
-            <div class="mt-2 w-px flex-1 bg-base-300"></div>
-          </div>
-          <div class="flex-1 rounded-xl border border-accent/40 bg-accent/10 p-4 shadow-sm">
-            <div class="flex items-center gap-2 text-lg font-semibold">
-              <span aria-hidden="true">📄</span>
-              <span>2 New Preprints</span>
-            </div>
-            <div class="mt-2 grid gap-2 sm:grid-cols-2">
-              <div class="rounded-lg bg-base-100/80 p-3">
-                <div class="text-sm font-semibold">PAIR-Bench</div>
-                <div class="text-sm opacity-80">Code improvement with progressive, adaptive feedback</div>
-              </div>
-              <div class="rounded-lg bg-base-100/80 p-3">
-                <div class="text-sm font-semibold">SpecCoder</div>
-                <div class="text-sm opacity-80">Executable intermediate specifications for Code LLMs</div>
+    <div class="mb-4 flex items-end justify-between gap-4">
+      <div>
+        <div class="text-3xl w-full font-bold mt-2">News</div>
+        <p class="mt-1 text-sm opacity-70">Recent research updates and milestones</p>
+      </div>
+    </div>
+    <div class="max-h-[32rem] overflow-y-auto pr-2">
+      <div class="space-y-5">
+        {newsItems.map((item, index) => (
+          <article class="grid grid-cols-[4.5rem_1rem_minmax(0,1fr)] gap-3 sm:grid-cols-[5.5rem_1.25rem_minmax(0,1fr)]">
+            <div class="pt-4 text-right">
+              <div class="inline-flex rounded-full border border-base-300 bg-base-100 px-2.5 py-1 text-[0.7rem] font-semibold uppercase leading-tight tracking-wide shadow-sm">
+                {item.date}
               </div>
             </div>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <div class="flex w-5 flex-col items-center pt-2">
-            <div class="h-3 w-3 rounded-full bg-secondary"></div>
-            <div class="mt-2 w-px flex-1 bg-base-300"></div>
-          </div>
-          <div class="flex-1 rounded-xl border border-secondary/40 bg-secondary/10 p-4 shadow-sm">
-            <div class="flex items-center gap-2 text-lg font-semibold">
-              <span aria-hidden="true">🎉</span>
-              <span>ACL 2026 Acceptance</span>
+            <div class="flex flex-col items-center pt-5">
+              <div class={`h-3 w-3 rounded-full ring-4 ring-base-100 ${item.markerClass}`}></div>
+              {index < newsItems.length - 1 && (
+                <div class="mt-2 w-px flex-1 bg-base-300"></div>
+              )}
             </div>
-            <p class="mt-1 text-base">
-              <b>SpecMind</b> was accepted to the <b>ACL 2026 Main Conference</b> with acceptance rate ~19%.
-            </p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <div class="flex w-5 flex-col items-center pt-2">
-            <div class="h-3 w-3 rounded-full bg-accent"></div>
-            <div class="mt-2 w-px flex-1 bg-base-300"></div>
-          </div>
-          <div class="flex-1 rounded-xl border border-accent/40 bg-accent/10 p-4 shadow-sm">
-            <div class="flex items-center gap-2 text-lg font-semibold">
-              <span aria-hidden="true">📄</span>
-              <span>2 new Preprints on Automated Program Repair</span>
-            </div>
-            <div class="mt-2 grid gap-2 sm:grid-cols-2">
-              <div class="rounded-lg bg-base-100/80 p-3">
-                <div class="text-sm font-semibold">EvolRepair</div>
-                <div class="text-sm opacity-80">Semantic evolution for LLM-guided APR</div>
+            <div class={`rounded-xl border p-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md ${item.cardClass}`}>
+              <div class="flex items-start justify-between gap-3">
+                <div class="flex items-center gap-2 text-lg font-semibold leading-snug">
+                  <span aria-hidden="true">{item.icon}</span>
+                  <span>{item.title}</span>
+                </div>
               </div>
-              <div class="rounded-lg bg-base-100/80 p-3">
-                <div class="text-sm font-semibold">SpecTune</div>
-                <div class="text-sm opacity-80">Specification-guided repair with intermediate behavioral signals</div>
-              </div>
+              {item.cards ? (
+                <div class="mt-3 grid gap-2 sm:grid-cols-2">
+                  {item.cards.map((card) => (
+                    <div class="rounded-lg bg-base-100/80 p-3">
+                      <div class="text-sm font-semibold">{card.title}</div>
+                      <div class="text-sm opacity-80">{card.desc}</div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p class="mt-2 text-base leading-relaxed" set:html={item.body ?? ""}></p>
+              )}
             </div>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <div class="flex w-5 flex-col items-center pt-2">
-            <div class="h-3 w-3 rounded-full bg-warning"></div>
-            <div class="mt-2 w-px flex-1 bg-base-300"></div>
-          </div>
-          <div class="flex-1 rounded-xl border border-warning/40 bg-warning/10 p-4 shadow-sm">
-            <div class="flex items-center gap-2 text-lg font-semibold">
-              <span aria-hidden="true">🏆</span>
-              <span>ACM SIGSOFT Distinguished Paper Award</span>
-            </div>
-            <p class="mt-1 text-base"><b>SWE-Synth</b> received the <b>ACM SIGSOFT Distinguished Paper Award</b> at ICSE 2026, recognizing it among the top <b>1.5%</b> of accepted papers.</p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <div class="flex w-5 flex-col items-center pt-2">
-            <div class="h-3 w-3 rounded-full bg-success"></div>
-            <div class="mt-2 w-px flex-1 bg-base-300"></div>
-          </div>
-          <div class="flex-1 rounded-xl border border-success/40 bg-success/10 p-4 shadow-sm">
-            <div class="flex items-center gap-2 text-lg font-semibold">
-              <span aria-hidden="true">🎉</span>
-              <span>ICSE 2026 Acceptances</span>
-            </div>
-            <p class="mt-1 text-base">
-              Two papers accepted: <b>TestWeaver</b> and <b>SWE-Synth</b> in ICSE 2026 Research Track (April 12-April 18, 2026, Rio de Janeiro, Brazil)
-            </p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <div class="flex w-5 flex-col items-center pt-2">
-            <div class="h-3 w-3 rounded-full bg-info"></div>
-            <div class="mt-2 w-px flex-1 bg-base-300"></div>
-          </div>
-          <div class="flex-1 rounded-xl border border-info/40 bg-info/10 p-4 shadow-sm">
-            <div class="flex items-center gap-2 text-lg font-semibold">
-              <span aria-hidden="true">🎉</span>
-              <span>NAACL 2025 Acceptance</span>
-            </div>
-            <p class="mt-1 text-base">
-              <b>VisualCoder</b> was accepted to Findings of NAACL 2025 (April 29-May 4, 2025, Albuquerque, New Mexico, USA)
-            </p>
-          </div>
-        </div>
-        <div class="flex gap-4">
-          <div class="flex w-5 flex-col items-center pt-2">
-            <div class="h-3 w-3 rounded-full bg-primary"></div>
-          </div>
-          <div class="flex-1 rounded-xl border border-primary/30 bg-primary/10 p-4 shadow-sm">
-            <div class="flex items-center gap-2 text-lg font-semibold">
-              <span aria-hidden="true">🎉</span>
-              <span>FORGE 2025 Acceptance</span>
-            </div>
-            <p class="mt-1 text-base">
-              <b>CodeFlow</b> was accepted to FORGE 2025 (April 27-April 28, Ottawa, Ontario, Canada).
-            </p>
-          </div>
-        </div>
+          </article>
+        ))}
       </div>
     </div>
   </div>

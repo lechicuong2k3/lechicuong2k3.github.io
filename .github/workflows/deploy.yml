@@ -24,7 +24,7 @@ jobs:
         uses: withastro/action@v2
         with:
           # path: . # The root location of your Astro project inside the repository. (optional)
-          node-version: 22 # The specific version of Node that should be used to build your site. (optional)
+          node-version: 20 # Keep this older Astro/sharp lockfile on a compatible Node runtime.
           package-manager: pnpm@8.15.3 # Keep pnpm compatible with this lockfile and avoid pnpm@latest Node requirements.
 
   deploy:
